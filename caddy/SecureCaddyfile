@@ -5,7 +5,7 @@
     gzip
     log stdout
     errors stdout
-
+    tls /root/conf/key/aria2.crt /root/conf/key/aria2.key
 }
 
 {$DOMAIN}/aria2 {
@@ -16,5 +16,5 @@
   errors stdout
 
   basicauth / {$ARIA2_USER} {$ARIA2_PWD}
-
+  tls /root/conf/key/aria2.crt /root/conf/key/aria2.key
 }
