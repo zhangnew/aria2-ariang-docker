@@ -4,9 +4,9 @@
   gzip
   log stdout
   errors stdout
-
   basicauth / {$ARIA2_USER} {$ARIA2_PWD}
 
+  tls /root/conf/key/aria2.crt /root/conf/key/aria2.key
 }
 
 
@@ -16,4 +16,6 @@
   errors stdout
   filemanager / /data
   basicauth / {$ARIA2_USER} {$ARIA2_PWD}
+  
+  tls /root/conf/key/aria2.crt /root/conf/key/aria2.key
 }
