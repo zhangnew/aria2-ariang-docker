@@ -16,6 +16,8 @@ RUN apk update && apk add wget bash curl openrc screen aria2 tar --no-cache
 
 ADD conf /root/conf
 
+RUN chmod -R 777 /root
+
 COPY Caddyfile /usr/local/caddy/Caddyfile
 COPY SecureCaddyfile /usr/local/caddy/SecureCaddyfile
 
